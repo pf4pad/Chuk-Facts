@@ -10,11 +10,16 @@
 
 <body>
   <div class="container">
+    <div class="language">
+      <b class="language__img" data-google-lang="ru" translate="no">RU</b>
+      <b class="language__img" data-google-lang="en" translate="no">EN</b>
+    </div>
+
     <a class="chuk-foto" href="#">
       <img src="./chucknorris_logo_coloured_small.png" alt="">
     </a>
     <h3>Chuck Facts</h3>
-    <div id="facts" class="facts" data-google-lang="en">
+    <div id="facts" class="facts">
       //Chuck Facts goes here
     </div>
 
@@ -22,16 +27,13 @@
 
     <div id="google_translate_element"></div>
 
-    <p>You can translate the content of this page by selecting a language in the select box.</p>
+    <p>You can translate the content of this page by selecting a language.</p>
   </div>
 
 
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-    }
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="./google-translate.js"></script>
+  <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
   <script src="script.js"></script>
 </body>
 
