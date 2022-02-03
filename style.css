@@ -51,7 +51,7 @@ transition: 0.3s;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0,0,0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-  padding: 50px 20px;
+  padding: 20px;
   text-align: center;
   max-width: 100%;
   width: 800px;
@@ -101,21 +101,10 @@ margin-bottom: 20px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale
-}
-
-.chuk-foto{
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
 } 
 .chuk-foto img{
-  width: calc(30vw - 40px);
+  width: calc(20vw - 40px);
 }
 .chuk-foto:hover, .chuk-foto:focus, .chuk-foto:active {
   -webkit-animation-name: chuk-foto;
@@ -234,4 +223,27 @@ p{
     -webkit-transform: translateX(-1px) rotate(0);
     transform: translateX(-1px) rotate(0)
   }
+}
+
+.container-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;background: #000;
+  color: #fff;
+  padding: 20px;
+}
+.rsschool-link{
+  width: 108px;
+  height: 40px;
+  background: url('./rss.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.github-link{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 }
