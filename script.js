@@ -20,3 +20,19 @@ async function generateFacts() {
 
 }
 
+function random(min, max) {
+  let n = Math.floor(min + Math.random() * (max - min))
+  console.log(n)
+  return n
+}
+const generateBackground = () => {
+  let r = random(0, 255)
+  let g = random(0, 255)
+  let b = random(0, 255)
+
+  document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b}`;
+  factsEl.style.color = `rgb(${b}, ${g}, ${r})`
+  factsBtn.style.backgroundColor = `rgb(${g}, ${r}, ${b}`
+}
+factsBtn.addEventListener('click', generateBackground)
+
