@@ -1,9 +1,6 @@
 const factsEl = document.getElementById('facts')
 const factsBtn = document.getElementById('factsBtn')
 
-
-factsBtn.addEventListener('click', generateFacts)
-
 generateFacts()
 
 async function generateFacts() {
@@ -25,7 +22,7 @@ function random(min, max) {
   console.log(n)
   return n
 }
-const generateBackground = () => {
+function generateBackground() {
   let r = random(0, 255)
   let g = random(0, 255)
   let b = random(0, 255)
@@ -34,5 +31,11 @@ const generateBackground = () => {
   factsEl.style.color = `rgb(${b}, ${g}, ${r})`
   factsBtn.style.backgroundColor = `rgb(${g}, ${r}, ${b}`
 }
+
+factsBtn.addEventListener('click', generateFacts)
+
 factsBtn.addEventListener('click', generateBackground)
+
+
+
 
