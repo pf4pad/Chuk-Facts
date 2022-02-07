@@ -1,6 +1,7 @@
 const factsEl = document.getElementById('facts')
 const factsBtn = document.getElementById('factsBtn')
-
+const chukFoto = document.getElementById('foto')
+const mute = document.getElementById('volume')
 generateFacts()
 
 async function generateFacts() {
@@ -19,10 +20,12 @@ async function generateFacts() {
 
 function random(min, max) {
   let n = Math.floor(min + Math.random() * (max - min))
-  console.log(n)
+
   return n
 }
-function generateBackground() {
+function generateEffects() {
+
+
   let r = random(0, 255)
   let g = random(0, 255)
   let b = random(0, 255)
@@ -30,11 +33,41 @@ function generateBackground() {
   document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b}`;
   factsEl.style.color = `rgb(${b}, ${g}, ${r})`
   factsBtn.style.backgroundColor = `rgb(${g}, ${r}, ${b}`
+  chukFoto.classList.add('chuk-foto-active');
+
+  let myGreeting = setTimeout(function () {
+    chukFoto.classList.remove('chuk-foto-active');
+
+  }, 1000)
+
 }
 
-factsBtn.addEventListener('click', generateFacts)
+let isMute = false; // флаг отключения звука
+const myAudio = new Audio;
+myAudio.src = "./Gong.mp3";
+function myAudioPlay() {
+  myAudio.play();
+}
 
-factsBtn.addEventListener('click', generateBackground)
+function myAudioMute() {
+  if (!isMute) {
+    myAudio.muted = true;
+    mute.innerText = "Sound";
+  } else {
+    myAudio.muted = false;
+    mute.innerText = "Mute";
+  }
+  isMute = !isMute
+}
+
+
+factsBtn.addEventListener('click', myAudioPlay)
+factsBtn.addEventListener('click', generateFacts)
+factsBtn.addEventListener('click', generateEffects)
+
+mute.addEventListener('click', myAudioMute)
+
+
 
 
 

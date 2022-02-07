@@ -105,7 +105,10 @@ margin-bottom: 20px;
 .chuk-foto img{
   width: calc(20vw - 40px);
 }
-.chuk-foto:hover, .chuk-foto:focus, .chuk-foto:active {
+.chuk-foto:hover,
+.chuk-foto:focus,
+.chuk-foto:active,
+.chuk-foto-active{
   -webkit-animation-name: chuk-foto;
   animation-name: chuk-foto;
   -webkit-animation-duration: .75s;
