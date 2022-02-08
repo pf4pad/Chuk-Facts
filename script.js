@@ -56,7 +56,7 @@ function myAudioMute() {
     mute.innerText = "Sound";
   } else {
     myAudio.muted = false;
-    mute.innerText = "Mute";
+    mute.innerText = "Without sound";
   }
   isMute = !isMute
 }
