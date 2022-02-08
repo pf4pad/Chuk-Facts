@@ -44,9 +44,10 @@ function generateEffects() {
 
 let isMute = false; // флаг отключения звука
 const myAudio = new Audio;
-myAudio.src = "./Gong.mp3";
+myAudio.src = "./Sound.mp3";
 function myAudioPlay() {
   myAudio.play();
+  myAudio.volume = 0.5;
 }
 
 function myAudioMute() {
@@ -61,10 +62,10 @@ function myAudioMute() {
 }
 
 
-factsBtn.addEventListener('click', myAudioPlay)
+
 factsBtn.addEventListener('click', generateFacts)
 factsBtn.addEventListener('click', generateEffects)
-
+factsBtn.addEventListener('click', myAudioPlay)
 mute.addEventListener('click', myAudioMute)
 
 
